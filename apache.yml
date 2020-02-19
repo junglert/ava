@@ -1,0 +1,24 @@
+---
+- hosts: webservers
+  become: true
+  become_user: root
+  tasks:
+  - name: Install httpd
+    package:
+      name: httpd
+      state: installed
+
+  - name: Install apache2
+    package:
+      name: apache2
+      state: installed
+      update_cache: true
+  - name: Start apache2
+    service:
+      name: apache2
+      state: started
+  - name: Copy files to remote host
+    copy:
+      src: index.html
+      dest: /srv/www/htdocs/index.html
+      mode: 0755
