@@ -9,37 +9,50 @@
 #variables
 user="$USER"
 keyfile="/home/$user/.ssh/ansible_key"
-
+splitter="----------------------------------------------------------------"
 
 #generate folder for files and addons, if not already generated
-echo "Initial check if folder ansible exists"
+echo "
+Initial check if folder ansible exists
+"
 ansible_path="/home/$user/ansible"
 
 if [ -d "$ansible_path" ];
     then
-            echo "Folder already exists"
+            echo -e "Folder already exists \e[32m\u2714 \e[39m
+            "
+            echo $splitter
     else
-            echo "Creating ansible folder in /home/$user/"
+            echo "Creating ansible folder in /home/$user/
+            "
             mkdir /home/$user/ansible
+            echo $splitter
 fi
 
 
 #check if playbook is in the ansible folder
-echo "Initial check if playbook exists in the ansible folder"
+echo "
+Initial check if playbook exists in the ansible folder
+"
 playbook="$ansible_path/apache.yml"
 
 if test -f $playbook;
     then
-            echo "$playbook exists in the ansible folder"
+            echo -e "$playbook exists \e[32m\u2714 \e[39m
+            "
+            echo $splitter
     else
-            echo "Copying playbook"
+            echo "Copying playbook into ansible folder
+            "
             cp apache.yml $ansible_path/
+            echo $splitter
 fi
 
 
 #collect data for ansible
 read -p "Username of remote host: " remote_host
-echo "-K for sudo - leave blank for no additional parameters"
+echo "
+-K for sudo - leave blank for no additional parameters"
 read -p "additional parameters: " par_var
 
 
