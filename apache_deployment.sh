@@ -12,7 +12,7 @@ keyfile="/home/$user/.ssh/ansible_key"
 
 
 #generate folder for files and addons, if not already generated
-echo "Initial check folder ansible exists"
+echo "Initial check if folder ansible exists"
 ansible_path="/home/$user/ansible"
 
 if [ -d "$ansible_path" ];
@@ -40,7 +40,7 @@ fi
 #collect data for ansible
 read -p "Username of remote host: " remote_host
 echo "-K for sudo - leave blank for no additional parameters"
-read -p "zusätzliche Parameter: " par_var
+read -p "additional parameters: " par_var
 
 
 #ansible playbook execution
