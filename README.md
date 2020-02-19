@@ -1,4 +1,4 @@
-# apache via ansible or short ava
+# apache via ansible / ava
 Apache Website that gets deployed via ansible
 ### For now, you need to manually install ansible
 ### Please install it via your packagemanager (yum, zypper, apt, dpkg, etc...)
