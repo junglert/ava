@@ -8,6 +8,7 @@
 
 #variables
 user="$USER"
+site_name="index.html"
 keyfile="/home/$user/.ssh/ansible_key"
 splitter="----------------------------------------------------------------"
 
@@ -30,7 +31,7 @@ if [ -d "$ansible_path" ];
 fi
 
 
-#check if playbook is in the ansible folder
+#check if playbook exists in the ansible folder
 echo "
 Initial check if playbook exists in the ansible folder
 "
@@ -47,6 +48,26 @@ if test -f $playbook;
             cp apache.yml $ansible_path/
             echo $splitter
 fi
+
+
+#check if index.html exists in the ansible folder
+echo "
+Initial check if index.html exists in the ansible folder
+"
+index="$ansible_path/$site_name"
+
+if test -f $index;
+    then
+            echo -e "$index exists \e[32m\u2714 \e[39m
+            "
+            echo $splitter
+    else
+            echo "Copying index.html into ansible folder
+            "
+            cp $site_name $ansible_path
+            echo $splitter
+fi
+
 
 
 #collect data for ansible
