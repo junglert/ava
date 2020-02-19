@@ -21,7 +21,7 @@ Apache Website that gets deployed via ansible
       ssh-copy-id -i <NAME OF YOUR KEY> hostname@ip
       
   Everything should be configured now and we can start with the main installation process
-
+***
 # How to:
   
   Install this git-repo:
