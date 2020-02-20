@@ -47,10 +47,9 @@ Apache Website that gets deployed via ansible
   
            -K
   
-  You will be asked to enter the password of the remote host, enter the password and ansible should now setup the website.
-      
-  ***    
-   # Future plans:
+  You will be asked to enter the password of the remote host, enter the password and ansible should now setup the website.     
+***    
+# Future plans:
    
    - automatically installes ansible if not already installed
      
