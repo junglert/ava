@@ -8,7 +8,12 @@ Apache Website that gets deployed via ansible
   ## Edit the ansible hosts file in /etc/ansible/
   
   Delete the # in front of [webservers]
-  and add the IP of your remote host
+  
+          ##[webservers]
+          ##120.0.0.0
+          ##120.0.0.1
+          
+  and add the IP of your remote host beneath the default ips
   
   ## Generate a new ansible-ssh-key
   
