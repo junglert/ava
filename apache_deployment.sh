@@ -10,13 +10,15 @@
 user="$USER"
 site_name="index.html"
 keyfile="/home/$user/.ssh/ansible_key"
+ansible_path="/home/$user/ansible"
+playbook="$ansible_path/apache.yml"
+index="$ansible_path/$site_name"
 splitter="----------------------------------------------------------------"
 
 #generate folder for files and addons, if not already generated
 echo "
 Initial check if folder ansible exists
 "
-ansible_path="/home/$user/ansible"
 
 if [ -d "$ansible_path" ];
     then
@@ -35,7 +37,6 @@ fi
 echo "
 Initial check if playbook exists in the ansible folder
 "
-playbook="$ansible_path/apache.yml"
 
 if test -f $playbook;
     then
@@ -54,7 +55,6 @@ fi
 echo "
 Initial check if index.html exists in the ansible folder
 "
-index="$ansible_path/$site_name"
 
 if test -f $index;
     then
