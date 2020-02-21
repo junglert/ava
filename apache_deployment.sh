@@ -45,7 +45,7 @@ if test -f $playbook;
     else
             echo "Copying playbook into ansible folder
             "
-            cp apache.yml $ansible_path/
+            cp playbooks/apache.yml $ansible_path/
             echo $splitter
 fi
 
