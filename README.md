@@ -47,7 +47,13 @@ Apache Website that gets deployed via ansible
   
            -K
   
-  You will be asked to enter the password of the remote host, enter the password and ansible should now setup the website.     
+  You will be asked to enter the password of the remote host, enter the password and ansible should now setup the website.
+  
+# What else can you do with this script?:
+
+  You can use any .yml playbook and deploy it via this script.
+  Just simply change the path of the variable.
+  
 ***    
 # Future plans:
    
