@@ -15,11 +15,11 @@ playbook="$ansible_path/apache.yml"
 index="$ansible_path/$site_name"
 splitter="----------------------------------------------------------------"
 
+
 #generate folder for files and addons, if not already generated
 echo "
 Initial check if folder ansible exists
 "
-
 if [ -d "$ansible_path" ];
     then
             echo -e "Folder already exists \e[32m\u2714 \e[39m
@@ -37,7 +37,6 @@ fi
 echo "
 Initial check if playbook exists in the ansible folder
 "
-
 if test -f $playbook;
     then
             echo -e "$playbook exists \e[32m\u2714 \e[39m
@@ -55,7 +54,6 @@ fi
 echo "
 Initial check if index.html exists in the ansible folder
 "
-
 if test -f $index;
     then
             echo -e "$index exists \e[32m\u2714 \e[39m
@@ -67,7 +65,6 @@ if test -f $index;
             cp $site_name $ansible_path
             echo $splitter
 fi
-
 
 
 #collect data for ansible
