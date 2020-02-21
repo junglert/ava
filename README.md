@@ -27,7 +27,7 @@ Apache Website that gets deployed via ansible
       
   Everything should be configured now and we can start with the main installation process
 ***
-# How to:
+# How to install and get started
   
   Install this git-repo:
   
@@ -49,13 +49,13 @@ Apache Website that gets deployed via ansible
   
   You will be asked to enter the password of the remote host, enter the password and ansible should now setup the website.
   
-# What else can you do with this script?:
+# What else can you do with this script?
 
   You can use any .yml playbook and deploy it via this script.
   Just simply change the path of the variable.
   
 ***    
-# Future plans:
+# Future plans
    
    - automatically installes ansible if not already installed
      
