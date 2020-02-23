@@ -27,7 +27,7 @@ Apache Website that gets deployed via ansible
   
       ssh-copy-id -i <PATH_TO_THE_PUBLIC_KEY> username@hostname
       
-  After this initial configuration we can continue with the main isntallation process
+  After this initial configuration we can continue with the main installation process
 ***
 # How to install and get started
   
