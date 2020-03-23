@@ -33,7 +33,7 @@ Apache Website that gets deployed via ansible
   
   Clone this git-repo:
   
-         git clone https://github.com/junglert/apache_via_ansible.git
+         git clone https://github.com/junglert/ava.git
 
     
   Execute the script
